@@ -1,0 +1,13 @@
+/Users/angelina/Downloads/Sprint_3/src/main/java/dto/CourierAuthWithWrongLogin.java
+/Users/angelina/Downloads/Sprint_3/src/main/java/dto/ForOrder.java
+/Users/angelina/Downloads/Sprint_3/src/main/java/dto/ForOrderToGetTheList.java
+/Users/angelina/Downloads/Sprint_3/src/main/java/BaseApiClient.java
+/Users/angelina/Downloads/Sprint_3/src/main/java/dto/CourierAuthWithWrongPassword.java
+/Users/angelina/Downloads/Sprint_3/src/main/java/dto/CorrectCourierForAuth.java
+/Users/angelina/Downloads/Sprint_3/src/main/java/dto/MakeOrderResponse.java
+/Users/angelina/Downloads/Sprint_3/src/main/java/dto/IdCourier.java
+/Users/angelina/Downloads/Sprint_3/src/main/java/dto/RequestCorrectCourier.java
+/Users/angelina/Downloads/Sprint_3/src/main/java/dto/CourierAuthWithoutPassword.java
+/Users/angelina/Downloads/Sprint_3/src/main/java/dto/CourierAuthWithoutLogin.java
+/Users/angelina/Downloads/Sprint_3/src/main/java/dto/CorrectCourier.java
+/Users/angelina/Downloads/Sprint_3/src/main/java/dto/NonExistentCourier.java
