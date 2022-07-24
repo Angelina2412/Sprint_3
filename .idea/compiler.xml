@@ -15,7 +15,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="Sprint_3" options="--add-modules java.base" />
+      <module name="Sprint_3" options="" />
     </option>
   </component>
 </project>
