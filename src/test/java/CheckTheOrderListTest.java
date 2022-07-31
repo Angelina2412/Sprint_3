@@ -8,7 +8,8 @@ import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.junit.Assert.assertTrue;
 
 
-public class CheckTheOrderListTest {
+public class CheckTheOrderListTest  {
+    //исправила название
     private final BaseApiClient apiClient = new BaseApiClient();
 
     @Test

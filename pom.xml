@@ -57,7 +57,7 @@
                 <configuration>
                     <testFailureIgnore>false</testFailureIgnore>
                     <argLine>
-                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/2.17/aspectjweaver-2.17.jar"
                     </argLine>
                     <properties>
                         <property>
