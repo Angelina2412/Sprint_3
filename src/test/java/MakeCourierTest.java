@@ -6,7 +6,7 @@ import java.io.File;
 import static org.hamcrest.Matchers.equalTo;
 
 public class MakeCourierTest {
-    //исправила название
+    //исправила название.
     protected ClassLoader classLoader = getClass().getClassLoader();
     private File correctCourier = new File(classLoader.getResource("correctCourier.json").getFile());
     private File courierWithoutLogin = new File(classLoader.getResource("courierwithoutlogin.json").getFile());

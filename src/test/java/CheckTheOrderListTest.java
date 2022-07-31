@@ -9,7 +9,7 @@ import static org.junit.Assert.assertTrue;
 
 
 public class CheckTheOrderListTest  {
-    //исправила название
+    //исправила название.
     private final BaseApiClient apiClient = new BaseApiClient();
 
     @Test

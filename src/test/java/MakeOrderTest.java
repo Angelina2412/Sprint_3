@@ -10,7 +10,7 @@ import static org.hamcrest.CoreMatchers.notNullValue;
 
 @RunWith(JUnitParamsRunner.class)
 public class MakeOrderTest {
-    //исправила назвавние
+    //исправила назвавние.
     private final BaseApiClient apiClient = new BaseApiClient();
     @Test
     @DisplayName("Check status code")

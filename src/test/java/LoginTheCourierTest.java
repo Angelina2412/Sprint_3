@@ -13,7 +13,7 @@ import static org.hamcrest.CoreMatchers.notNullValue;
 
 
 public class LoginTheCourierTest {
-    //исправила название
+    //исправила название.
     private final BaseApiClient apiClient = new BaseApiClient();
     public void makeCourier() {
         CorrectCourier correctCourier = new CorrectCourier("Pupsik5", "12345", "Alolo");
