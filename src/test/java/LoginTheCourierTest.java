@@ -1,4 +1,5 @@
 import dto.*;
+import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.Response;
 import org.junit.After;
 import org.junit.Before;
@@ -11,14 +12,14 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.notNullValue;
 
 
-public class LoginTheCourier {
+public class LoginTheCourierTest {
     private final BaseApiClient apiClient = new BaseApiClient();
     public void makeCourier() {
-        CorrectCourier correctCourier = new CorrectCourier("Pupsik2", "12345", "Alolo");
+        CorrectCourier correctCourier = new CorrectCourier("Pupsik5", "12345", "Alolo");
                 apiClient.post("/api/v1/courier", correctCourier);
     }
     public int getId() {
-        CorrectCourierForAuth correctCourierForAuth = new CorrectCourierForAuth("Pupsik2", "12345");
+        CorrectCourierForAuth correctCourierForAuth = new CorrectCourierForAuth("Pupsik5", "12345");
         Response response = apiClient.post("/api/v1/courier/login", correctCourierForAuth);
         return response.then()
                 .extract()
@@ -39,8 +40,9 @@ public class LoginTheCourier {
      }
 
     @Test
+    @DisplayName("Check status code")
     public void courierCanAuthAndIdIsCorrect(){
-        CorrectCourierForAuth correctCourierForAuth = new CorrectCourierForAuth("Pupsik2", "12345");
+        CorrectCourierForAuth correctCourierForAuth = new CorrectCourierForAuth("Pupsik5", "12345");
         Response response = apiClient.post("/api/v1/courier/login", correctCourierForAuth);
         int id = response.then().assertThat().body("id", notNullValue())
                 .and()
@@ -51,6 +53,7 @@ public class LoginTheCourier {
     }
 
     @Test
+    @DisplayName("Check status code")
     public void courierAuthWithoutLogin(){
         CourierAuthWithoutLogin courierAuthWithoutLogin = new CourierAuthWithoutLogin("12345");
         Response response = apiClient.post("/api/v1/courier/login", courierAuthWithoutLogin);
@@ -67,6 +70,7 @@ public class LoginTheCourier {
 //                .statusCode(400);
 //    }
     @Test
+    @DisplayName("Check status code")
     public void courierAuthWithWrongLogin(){
         CourierAuthWithWrongLogin courierAuthWithWrongLogin = new CourierAuthWithWrongLogin ("Pupsiiik", "12345");
         Response response = apiClient.post("/api/v1/courier/login", courierAuthWithWrongLogin);
@@ -75,6 +79,7 @@ public class LoginTheCourier {
                 .statusCode(404);
     }
     @Test
+    @DisplayName("Check status code")
     public void courierAuthWithWrongPassword(){
         CourierAuthWithWrongPassword courierAuthWithWrongPassword = new CourierAuthWithWrongPassword ("Pupsik2", "11234");
         Response response = apiClient.post("/api/v1/courier/login", courierAuthWithWrongPassword);
@@ -83,6 +88,7 @@ public class LoginTheCourier {
                 .statusCode(404);
     }
     @Test
+    @DisplayName("Check status code")
     public void authNonExistentCourier(){
         NonExistentCourier nonExistentCourier = new NonExistentCourier ("Kispup2", "54321");
         Response response = apiClient.post("/api/v1/courier/login", nonExistentCourier);

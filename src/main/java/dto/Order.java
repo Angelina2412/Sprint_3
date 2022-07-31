@@ -1,6 +1,6 @@
 package dto;
 
-public class Orders {
+public class Order {
     private int id;
     private int courierId;
     private String firstName;
@@ -138,7 +138,7 @@ public class Orders {
 
     private String updatedAt;
 
-    public Orders(int id, int courierId, String firstName, String lastName, String address, String metroStation, String phone, int rentTime, String deliveryDate, int track, String[] color, String comment, String createdAt, String updatedAt, int status) {
+    public Order(int id, int courierId, String firstName, String lastName, String address, String metroStation, String phone, int rentTime, String deliveryDate, int track, String[] color, String comment, String createdAt, String updatedAt, int status) {
         this.id = id;
         this.courierId = courierId;
         this.firstName = firstName;

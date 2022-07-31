@@ -5,7 +5,7 @@ import org.junit.Test;
 import java.io.File;
 import static org.hamcrest.Matchers.equalTo;
 
-public class MakeCourier {
+public class MakeCourierTest {
     protected ClassLoader classLoader = getClass().getClassLoader();
     private File correctCourier = new File(classLoader.getResource("correctCourier.json").getFile());
     private File courierWithoutLogin = new File(classLoader.getResource("courierwithoutlogin.json").getFile());

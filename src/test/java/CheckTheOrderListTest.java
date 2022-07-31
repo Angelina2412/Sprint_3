@@ -1,19 +1,19 @@
 import dto.*;
+import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.Response;
 import org.apache.http.HttpStatus;
 import org.junit.Test;
-
-import java.util.ArrayList;
 
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.junit.Assert.assertTrue;
 
 
-public class CheckTheOrderList {
+public class CheckTheOrderListTest {
     private final BaseApiClient apiClient = new BaseApiClient();
 
     @Test
-    public void checkThat() { //поменять название
+    @DisplayName("Check status code")
+    public void checkThatBodyHaveTheOrderList() { //поменять название
         Response response = apiClient.get("/api/v1/orders");
         OrderResponse r = response.then().assertThat().statusCode(HttpStatus.SC_OK)
                 .and()

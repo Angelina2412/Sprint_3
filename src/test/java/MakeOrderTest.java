@@ -1,4 +1,5 @@
 import dto.ForOrder;
+import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.Response;
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
@@ -8,10 +9,10 @@ import org.junit.runner.RunWith;
 import static org.hamcrest.CoreMatchers.notNullValue;
 
 @RunWith(JUnitParamsRunner.class)
-public class MakeOrder {
+public class MakeOrderTest {
     private final BaseApiClient apiClient = new BaseApiClient();
     @Test
-
+    @DisplayName("Check status code")
     @Parameters({
             "BLACK",
             "GREY",
