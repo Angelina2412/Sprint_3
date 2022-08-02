@@ -3,8 +3,6 @@ import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.Response;
 import org.apache.http.HttpStatus;
 import org.junit.Test;
-
-import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.junit.Assert.assertTrue;
 
 
@@ -13,7 +11,7 @@ public class CheckTheOrderListTest  {
     private final BaseApiClient apiClient = new BaseApiClient();
 
     @Test
-    @DisplayName("Check status code")
+    @DisplayName("Check that status code equals 200")
     public void checkThatBodyHaveTheOrderList() { //поменять название
         Response response = apiClient.get("/api/v1/orders");
         OrderResponse r = response.then().assertThat().statusCode(HttpStatus.SC_OK)

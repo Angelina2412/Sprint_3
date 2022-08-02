@@ -1,8 +1,10 @@
 import dto.ForOrder;
 import io.qameta.allure.junit4.DisplayName;
+import io.restassured.internal.support.CloseHTTPClientConnectionInputStreamWrapper;
 import io.restassured.response.Response;
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
+import org.apache.http.HttpStatus;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -13,7 +15,7 @@ public class MakeOrderTest {
     //исправила назвавние.
     private final BaseApiClient apiClient = new BaseApiClient();
     @Test
-    @DisplayName("Check status code")
+    @DisplayName("Check that status code equals 200")
     @Parameters({
             "BLACK",
             "GREY",
@@ -27,7 +29,7 @@ public class MakeOrderTest {
         Response response = apiClient.post("/api/v1/orders", forOrder);
         response.then().assertThat().body("track", notNullValue())
                 .and()
-                .statusCode(201);
+                .statusCode(HttpStatus.SC_OK);
 
     }
 }
